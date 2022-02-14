@@ -36,11 +36,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
-          <li><a class="nav-link scrollto" href="#counts">Servicios</a></li>
-          
-          
+          <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
           <li class="dropdown"><a href="#"><span>Shop</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="./farmacia.html">Farmacia</a></li>
@@ -49,7 +45,10 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="./contacto.html">Contacto</a></li>
-          <li><a class="nav-link scrollto" href="./checkout.html"><i style="font-size: 20px;" class="bi bi-cart-fill"></i></a></li>
+          <li>
+            <button id="btnmarket">
+            <a id="carrito" class="nav-link scrollto" href="./checkout.html"><i style="font-size: 20px;" class="bi bi-cart-fill"></i></a></button>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -66,9 +65,60 @@
     </div>
   </section>
 
+
+
   <main id="main">
 
+    <div class="bg-custom p-4">
+      <p class="fs-3 text-black-50">Compra de XXXXXX</p>
+  </div>
+  <section class="shopping-cart my-5 p-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8">
+                  <div class="shopping__cart__table">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th>Producto</th>
+                                  <th>Cantidad</th>
+                                  <th>Total</th>
+                              </tr>
+                          </thead>
+                          <tbody id="items">
+                              <tr>
+                                  <td class="product__cart__item">
+                                      <div class="product__cart__item__pic">
+                                          <img class="shopping__cart__table-img" src="">
+                                      </div>
+                                      <div class="product__cart__item__text">
+                                          <h6>Nombre del producto</h6>
+                                          <h5 id="id">$ 000</h5>
+                                      </div>
+                                  </td>
+                                  <td class="quantity__item">
+                                      <div class="quantity">
+                                          <div class="pro-qty-2">
+                                              <input type="text" value="1" readonly>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  <td id="ccu-total" class="cart__price">$ 000</td>
+                              </tr>
+                              
+                          </tbody>
+                          
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="text-center"><button type="button" id="btnformulario">Comprar</button></div>
+  </section>
 
+    <div id="CarritoDetalle">
+
+    </div>
 
 
   </main>
@@ -153,7 +203,7 @@
   
   <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
-  
+  <script src="./assets/js/Carrito.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
