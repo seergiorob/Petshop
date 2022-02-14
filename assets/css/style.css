@@ -1292,18 +1292,20 @@ footer
   border: 2px solid #EEB902;
 }
 
-#btncomprar{
+/* #btncomprar{
   background: #EEB902;
   border: 0;
   padding: 10px 24px;
-  color: #444444;
+  color: white;
   transition: 0.4s;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 #btncomprar:hover{
   background: white;
   border: 2px solid #EEB902;
-}
+} */
 
 #btnmarket{
 background: transparent;
@@ -1473,4 +1475,11 @@ border: none;
   border: 1px solid #e1e1e1;
   padding: 14px 35px;
   display: inline-block;
+}
+
+.restasumx{
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bolder;
 }

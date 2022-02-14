@@ -373,11 +373,11 @@ function init() {
                                           </div>
                                       </div>
                                   </td>
-                                  <td><button class="itemsCount" onClick="restQ('${articulo._id}')">-</button></td>
+                                  <td><button class="restasumx" onClick="restQ('${articulo._id}')">-</button></td>
                                   <td id="ccu-total" class="cart__price">        $${articulo.cantidad * articulo.precio}</td>
                                   
-                                  <td><button class="itemsCount" onClick="addQ('${articulo._id}')">+</button></td>
-                                  <td><button class="botonCards" onClick="removeID('${articulo._id}')"> x </button></td>
+                                  <td><button class="restasumx" onClick="addQ('${articulo._id}')">+</button></td>
+                                  <td><button class="restasumx" onClick="removeID('${articulo._id}')"> x </button></td>
                               </tr>
                               `
 
@@ -404,20 +404,25 @@ document.getElementById("clear").addEventListener("click", function () {
     init()
 })
 var counter = []
-
 //FUNCIONES PARA AGRGAR DATOS AL CONTADOR
 function addQ(event) {
     counter = []
-    counter.push(...toDisplayFavorite.filter(pais => pais._id == event))
-    counter.map(pais => pais.cantidad++)
+    counter.push(...toDisplayFavorite.filter(articulos => articulos._id == event))
+    counter.map(function anonima(arti) {
+        if (arti.cantidad < arti.stock) {
+            arti.cantidad++
+        }
+
+    })
 
     init()
 }
 //FUNCION PARA RESTAR DATOS AL CONTADOR
 function restQ(event) {
     counter = []
-    counter.push(...toDisplayFavorite.filter(pais => pais._id == event))
-    counter.map(pais => pais.cantidad--)
+    counter.push(...toDisplayFavorite.filter(articulos => articulos._id == event))
+    counter.map(articulos => articulos.cantidad > 0 ? articulos.cantidad-- : articulos.cantidad)
+
 
     init()
 }

@@ -185,7 +185,7 @@ function cards(data) {
                   </div>
                   <div>
                   <p class="card-text btn-danger text-center" id="rojo">${articulos.aviso}</p>
-                  <button class="btn btn-warning w-100" onClick="getID('${articulos._id}')" >Agregar al Carrito  <i style="font-size: 16px;" class="bi bi-cart-fill"></i></button>
+                  <button class="btn btn-warning w-100" id="btnfarm" onClick="getID('${articulos._id}')" >Agregar al Carrito  <i style="font-size: 16px;" class="bi bi-cart-fill"></i></button>
                   </div>
                 </div>
               </div>
@@ -203,7 +203,7 @@ function cards(data) {
                   <p class="card-text">Stock: ${articulos.stock}</p>
 
                   </div>
-                  <button class="btn btn-warning" onClick="getID('${articulos._id}')" >Agregar al Carrito  <i style="font-size: 16px;" class="bi bi-cart-fill"></i></button>
+                  <button class="btn btn-warning w-100" id="btnfarm" onClick="getID('${articulos._id}')" >Agregar al Carrito  <i style="font-size: 16px;" class="bi bi-cart-fill"></i></button>
                 </div>
               </div>
 
