@@ -53,7 +53,7 @@ function getID(event) {
 
     localStorage.setItem("favoritos", JSON.stringify(clearFav));
 
-    init(clearFav)
+    init()
 
 }
 
@@ -75,7 +75,6 @@ function Separar(params) {
                     imagen: element.imagen,
                     tipo: element.tipo,
                     __v: element.__v,
-                    cantidad: 1,
                 }
             )
         } else {
@@ -89,7 +88,6 @@ function Separar(params) {
                 tipo: element.tipo,
                 __v: element.__v,
                 aviso: "ULTIMAS UNIDADES!",
-                cantidad: 1,
             })
         }
     })

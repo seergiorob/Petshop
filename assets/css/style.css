@@ -1292,6 +1292,19 @@ footer
   border: 2px solid #EEB902;
 }
 
+#btncomprar{
+  background: #EEB902;
+  border: 0;
+  padding: 10px 24px;
+  color: #444444;
+  transition: 0.4s;
+}
+
+#btncomprar:hover{
+  background: white;
+  border: 2px solid #EEB902;
+}
+
 #btnmarket{
 background: transparent;
 border: none;
