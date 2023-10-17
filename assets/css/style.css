@@ -716,8 +716,19 @@ section {
 # Cart
 */
 
-#cart {
+.cardContainer {
   width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.juguetesProdContainer{
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -725,7 +736,16 @@ section {
   flex-wrap: wrap;
 }
 
-.card{
+.prodFarmaciaContainer{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cardTest{
   margin: 20px;
   display: flex;
   flex-direction: column;
