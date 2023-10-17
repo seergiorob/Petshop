@@ -75,45 +75,22 @@
     <div class="container">
       <div class="row">
           <div class="col-md-12">
-              <h6 class="text-center"></h6> <input type="search" id="Input" class="form-control" placeholder="Buscar..." />
+              <h6 class="text-center"></h6> <input type="search" id="Input" class="form-control searchBar" placeholder="Buscar..." />
           </div>
       </div>
   </div>
     <!-- ======= About Section ======= -->
-    <section id="cart" class="cart">
+    
       
-      <div class="card flex justify-content-between" style="width: 20rem;">
-        <div class="card-body">
-        <img style="width: 15rem;" src="${articulos.imagen}" class="card-img-top" alt="...">
+      <section class="cardContainer"  >
+      
+        <div id="cart"></div>
+        <div class="prodFarmaciaContainer"></div>
         
-          <h5 class="card-title">${articulos.nombre}</h5>
-          <p class="card-text"></p>
-          <p class="card-text">Precio: ${articulos.precio}</p>
-          <p class="card-text">Stock: ${articulos.stock}</p>
-          <p class="card-text">${articulos.aviso}</p>
-        </div>
-        <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/4(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Juguete</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/4(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Juguete</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-        </div>
-      </div>
+        
+      </section>
       
-    </section>
+    
 
     
 
@@ -198,7 +175,7 @@
 
   <script src="./assets/js/alertproductofarmacia.js"></script>
   <script src="assets/js/main.js"></script>
-  <script src="./assets/js/Famacia.js"></script>
+  <script type="module" src="./assets/js/Famacia.js"></script>
   <script src="./assets/js/Carrito.js"></script>
 
 </body>

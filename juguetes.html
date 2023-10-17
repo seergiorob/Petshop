@@ -50,7 +50,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="./contacto.html">Contacto</a></li>
-          <li id="carrito">
+          <li id="cart">
             
           </li>
         </ul>
@@ -74,43 +74,17 @@
     <div class="container">
       <div class="row">
           <div class="col-md-12">
-              <h6 class="text-center"></h6> <input type="search" id="Input" class="form-control" placeholder="Buscar..." />
+              <h6 class="text-center"></h6> <input type="search" id="Input" class="form-control searchBar" placeholder="Buscar..." />
           </div>
       </div>
   </div>
 
     <!-- ======= About Section ======= -->
-    <section id="cart" class="cart">
+    <section class="cardContainer"  >
       
-      <div class="card" style="width: 18rem;">
-        <img src="${articulos.imagen}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">${articulos.nombre}</h5>
-          <p class="card-text">${articulos.descripcion}</p>
-          <p class="card-text">Precio: ${articulos.precio}</p>
-          <p class="card-text">Stock: ${articulos.stock}</p>
-          <p class="card-text">${articulos.aviso}</p>
-          <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/4(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Juguete</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/img/4(1).jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Juguete</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-warning">Agregar al Carrito</a>
-        </div>
-      </div>
+      <div ></div>
+      <div class="juguetesProdContainer"></div>
+      
       
     </section>
 
@@ -194,9 +168,9 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  
+  <script type="module" src="./assets/js/juguetes.js"></script>
   <script src="./assets/js/Carrito.js"></script>
-  <script src="./assets/js/juguetes.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
