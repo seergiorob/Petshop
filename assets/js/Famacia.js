@@ -25,7 +25,7 @@ import {
     displayProducts(prodFarmacia, prodFarmaciaContainer, cartContainer);
   
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    console.log(cart);
+    
   
     displayCart(cartContainer, cart);
   }

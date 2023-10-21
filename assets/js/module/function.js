@@ -84,6 +84,33 @@ function removeFromCart(productId, cartContainer) {
   localStorage.setItem("cart", JSON.stringify(cart));
   displayCart(cartContainer, cart);
 }
+window.addQuantityToCartItem = addQuantityToCartItem;
+
+function addQuantityToCartItem(tableContainer, productId) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let item = cart.find(product => product._id === productId);
+ 
+  if(item && item.disponibles > item.cantidad) {
+    item.cantidad++;
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  displayCartTable(tableContainer, cart);
+}
+
+function subtractQuantityFromCartItem(productId) {
+  let item = cart.find(product => product._id === productId);
+  if(item && item.cantidad > 0) {
+    item.cantidad--;
+  }
+  if(item.cantidad === 0) {
+    removeFromCart(productId, cartContainer);
+  } else {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart(cartContainer, cart);
+  }
+}
+
 
 function displayCart(cartContainer, cart) {
   if (cart.length > 0) {
@@ -100,7 +127,7 @@ function displayCart(cartContainer, cart) {
 </button>
           
           `;
-          
+
     cartContainer.innerHTML = htmlString;
 
     cart.forEach((product, index) => {
@@ -115,11 +142,66 @@ function displayCart(cartContainer, cart) {
   }
 }
 
+function displayCartTable(container, cart) {
+  let htmlTable = '';
+
+  if (cart.length > 0) {
+    cart.map((cart) => {
+      htmlTable += `
+    <tr>
+                              <td class="product__cart__item">
+                                  <div class="product__cart__item__pic">
+                                      <img class="shopping__cart__table-img" src="${
+                                        cart.imagen
+                                      }">
+                                  </div>
+                                  <div class="product__cart__item__text">
+                                      <h6>${cart.producto}</h6>
+                                      <h5 id="id">$ ${cart.precio}</h5>
+                                  </div>
+                              </td>
+                              <td class="quantity__item">
+                                  <div class="quantity">
+                                      <div class="pro-qty-2">
+                                          <input type="text" value="${
+                                            cart.cantidad
+                                          }" readonly>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td><button class="restasumx" onClick="subtractQuantityFromCartItem('${
+                                container
+                              }, ${
+                                cart._id
+                              }')">-</button></td>
+                              <td id="ccu-total" class="cart__price">        $${
+                                cart.cantidad * cart.precio
+                              }</td>
+                              
+                              <td><button class="restasumx" onClick="addQuantityToCartItem('${
+                                cart._id
+                              }')">+</button></td>
+                              <td><button class="restasumx" onClick="removeFromCart('${
+                                cart._id
+                              }')"> x </button></td>
+                          </tr>
+                          `;
+    });
+    container.innerHTML = htmlTable;
+  } else {
+    container.innerHTML = "<h3>Your cart is empty.</h3>";
+  }
+}
+
 export {
   getData,
   productosFarmacia,
   productosJuguetes,
   addToCart,
   displayCart,
+  displayCartTable,
   removeFromCart,
+  addQuantityToCartItem,
+  subtractQuantityFromCartItem
+
 };
